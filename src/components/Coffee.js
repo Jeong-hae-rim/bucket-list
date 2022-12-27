@@ -30,6 +30,7 @@ const CoffeeCup = styled.div`
     width: 200px;
     height: 200px;
     background: linear-gradient(to right, #080808, #5b5656);
+    border: 1px solid #5b5656;
     border-bottom-left-radius: 40%;
     border-bottom-right-radius: 40%;
 `;
@@ -105,6 +106,7 @@ const Drink = styled.div`
     background: linear-gradient(to left, #080300, #9b735c);
     height: 100%;
     width: 100%;
+    border: 3px solid #ba9b89;
     border-radius: 50%;
     animation: tea-move 3s linear infinite alternate;
 
@@ -130,6 +132,7 @@ const CupPlatte = styled.div`
     bottom: -35px;
     background: linear-gradient(to left, #ede0e0, #ffffff);
     box-shadow: 2px 2px 20px #f0e5e529;
+    border: 1px solid #5b5656;
     width: 300px;
     height: 100px;
     border-radius: 50%;
