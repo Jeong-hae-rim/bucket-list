@@ -1,16 +1,19 @@
-import { Coffee } from "./components/Coffee";
-import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
-
+import { Footer } from "./components/Footer";
+import BucketPage from "./pages/BucketPage";
+import { useWindowScrollTo } from "./hooks/useWindowScrollTo";
 
 function Main() {
+
+  useWindowScrollTo();
+
   return (
     <>
       <Header/>
-      <Coffee/>
+      <BucketPage />
       <Footer/>
     </>
-  );
+  )
 }
 
 export default Main;
