@@ -11,30 +11,28 @@ const Scroll = styled.div`
 `;
 
 const ScrollWheele = styled.button`
-    width: 1rem;
-    height: 1rem;
+    width: 1px;
+    height: 5px;
     border: none;
-    border-radius: 50%;
+    border-radius: 1rem;
     background: white;
     display: block;
     animation: cursor 1.5s linear infinite;
 
     @keyframes cursor {
         0% {
-            opacity: 0;
             transform: translateY(-0.5rem);
         }
 
         100% {
-            opacity: 1;
             transform: translateY(0.5rem);
         }
     }
 `;
 
 const ArrowDown = styled.div`
-    width: 1rem;
-    height: 1rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border: 2px solid transparent;
     border-right-color: white;
     border-bottom-color: white;
