@@ -1,7 +1,28 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const fadein = keyframes`
+   from {
+    opacity: 1;
+   }
+   to {
+    opacity: 0;
+   }
+`;
+
+const fadeout = keyframes`
+   from {
+    opacity: 0;
+   }
+   to {
+    opacity: 1;
+   }
+`;
 
 const CoffeeContainer = styled.div`
     position: relative;
+    opacity: ${(props) => props.fadeIn ? 0 : 1};
+    animation: 3s;
+    animation-name: ${(props) => props.fadeIn ? fadein : fadeout};
 `;
 
 const CoffeeCup = styled.div`
@@ -138,11 +159,9 @@ const CupPlatte = styled.div`
     }
 `;
 
-export const Coffee = () => {
-    
+export const Coffee = ({fadeIn}) => {
     return(
-        <section>
-            <CoffeeContainer>
+        <CoffeeContainer fadeIn={fadeIn}>
                 <CoffeeCup>
                     <CoffeeTop>
                         <Smoke>
@@ -154,10 +173,8 @@ export const Coffee = () => {
                     </CoffeeTop>
                 </CoffeeCup>
                 <CupPlatte/>
-            </CoffeeContainer>
-        </section>
+        </CoffeeContainer>
     )
-
 }
 
 const spanMap = [1,9,4,5,3,8,2,7,6].map((el, idx) => {
