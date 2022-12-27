@@ -17,9 +17,7 @@ const BucketPage = () => {
 
     return (
         <div>
-            <section ref={scrollRef}>
-                <Coffee fadeIn={hideElement} />
-            </section>
+            <Coffee scrollRef={scrollRef} fadeIn={hideElement} />
             <ScrollButton yCoord={yHeight} />
             <BucketWrapper>
                 본문

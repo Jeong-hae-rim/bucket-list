@@ -162,21 +162,23 @@ const CupPlatte = styled.div`
     }
 `;
 
-export const Coffee = ({fadeIn}) => {
+export const Coffee = ({scrollRef,fadeIn}) => {
     return(
-        <CoffeeContainer fadeIn={fadeIn}>
-                <CoffeeCup>
-                    <CoffeeTop>
-                        <Smoke>
-                            {spanMap}
-                        </Smoke>
-                        <CoffeeInner>
-                            <Drink/>
-                        </CoffeeInner>
-                    </CoffeeTop>
-                </CoffeeCup>
-                <CupPlatte/>
-        </CoffeeContainer>
+        <section ref={scrollRef}>
+            <CoffeeContainer fadeIn={fadeIn}>
+                    <CoffeeCup>
+                        <CoffeeTop>
+                            <Smoke>
+                                {spanMap}
+                            </Smoke>
+                            <CoffeeInner>
+                                <Drink/>
+                            </CoffeeInner>
+                        </CoffeeTop>
+                    </CoffeeCup>
+                    <CupPlatte/>
+            </CoffeeContainer>
+        </section>
     )
 }
 
