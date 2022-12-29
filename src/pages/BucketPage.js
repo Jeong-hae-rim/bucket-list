@@ -1,15 +1,8 @@
 import { useRef } from "react";
-import styled from "styled-components";
+import useWindowScroll from "../hooks/useWindowScroll";
 import { Coffee } from "../components/Coffee";
 import ScrollButton from "../components/ScrollButton";
-import useWindowScroll from "../hooks/useWindowScroll";
-
-const BucketWrapper = styled.div`
-    width: 100%;
-    height: 100vh;
-    color: #fff;
-
-`;
+import Buckets from "../components/Buckets";
 
 const BucketPage = () => {
     const scrollRef = useRef(null);
@@ -19,9 +12,7 @@ const BucketPage = () => {
         <div>
             <Coffee scrollRef={scrollRef} fadeIn={hideElement} />
             <ScrollButton yCoord={yHeight} />
-            <BucketWrapper>
-                본문
-            </BucketWrapper>
+            <Buckets />
         </div>
     )
 }
