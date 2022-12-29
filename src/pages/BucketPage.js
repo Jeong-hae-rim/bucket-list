@@ -12,7 +12,7 @@ const BucketPage = () => {
         <div>
             <Coffee scrollRef={scrollRef} fadeIn={hideElement} />
             <ScrollButton yCoord={yHeight} />
-            <Buckets />
+            <Buckets scrollRef={scrollRef} flipIn={hideElement} />
         </div>
     )
 }

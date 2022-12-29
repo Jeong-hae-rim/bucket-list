@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const flipIn = keyframes`
+    0% {
+        opacity: 0;
+        transform: perspective(90vw) rotateY(67.5deg); }
+    100% {
+        opacity: 1;
+        transform: none; 
+    }
+`;
 
 const BucketItem = styled.div`
     width: 330px;
@@ -7,8 +17,15 @@ const BucketItem = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: #eee;
-    margin-right: 2rem;
     color: #000;
+    opacity: ${(props) => props.flipIn ? 1 : 0};
+    animation-duration: ${(props) => (props.animationIdx + 1)}s;
+    animation-name: ${(props) => props.flipIn && flipIn};
+
+    @media screen and (max-width: 900px) {
+        height: 500px;
+        margin-bottom: 1rem;
+    }
 `;
 
 const BucketTop = styled.div`
@@ -18,16 +35,27 @@ const BucketTop = styled.div`
     height: 20%;
     border-radius: 0 0 10px 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    @media screen and (max-width: 900px) {
+        height: 100px;
+        position: relative;
+    }
+
 `;
 
 const BucketContent = styled.div`
     position: absolute;
-    width: 20%;
+    width: 330px;
     top : 7rem;
     height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 900px) {
+        top: 0;
+        position: relative;
+    }
 `;
 
 const BucketName = styled.div`
@@ -38,6 +66,11 @@ const BucketName = styled.div`
     padding: 1rem;
     text-align: center;
     border-bottom: 4px dashed #000;
+
+    @media screen and (max-width: 900px) {
+        padding: 0.5rem;
+        position: relative;
+    }
 `;
 
 const Item = styled.div`
@@ -45,7 +78,6 @@ const Item = styled.div`
     height: 60%;
     border-bottom: 4px dashed #000;
     margin-bottom: 1rem;
-    overflow: auto;
     
     >div{
         width: 100%;
@@ -84,7 +116,7 @@ const TotalCount = styled.div`
     }
 `;
 
-const Bucket = ({el}) => {
+const Bucket = ({ idx, el, flipIn }) => {
 
     let count = 0;
 
@@ -92,8 +124,8 @@ const Bucket = ({el}) => {
         count += el.content.date;
     })
 
-    return(
-        <BucketItem>
+    return (
+        <BucketItem animationIdx={idx} flipIn={flipIn}>
             <BucketTop />
             <BucketContent>
                 <BucketName>
@@ -101,9 +133,9 @@ const Bucket = ({el}) => {
                 </BucketName>
                 <Item>
                     {el.map((el, idx) => {
-                        return(
+                        return (
                             <div key={el.id}>
-                                <span className="bucket-id">{el.id}</span>
+                                <span className="bucket-id">1</span>
                                 <span className="bucket-title">{el.content.title}</span>
                                 <span className="bucket-date">{el.content.date}</span>
                             </div>
