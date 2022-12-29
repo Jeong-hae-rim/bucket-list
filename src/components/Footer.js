@@ -2,7 +2,7 @@
 export const Footer = () => {
     return (
         <footer>
-            Made by Hearim
+            Made by Haerim
         </footer>
     )
 }

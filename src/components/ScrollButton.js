@@ -62,8 +62,8 @@ const ScrollButton = ({yCoord}) => {
 
     return(
         <div className="scroll-button">
-            <Scroll>
-                <ScrollWheele onClick={handleScroll} />
+            <Scroll onClick={handleScroll}>
+                <ScrollWheele />
             </Scroll>
             <ArrowDown />
         </div>
