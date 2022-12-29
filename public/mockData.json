@@ -1,0 +1,184 @@
+{
+  "Book": [
+    {
+      "id": 1,
+      "content": {
+        "title": "Operating System Concepts 10th Ed.",
+        "author": "Siberschatz et. al.",
+        "date": 30.0
+      },
+      "category" : "Book",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 2,
+      "content": {
+        "title": "모던 자바스크립트 Deep Dive",
+        "author": "이웅모",
+        "date": 30.0
+      },
+      "category" : "Book",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 3,
+      "content": {
+        "title": "프로그래밍 대화에서 배우는 알고리즘 문제 해결 전략",
+        "author": "구종만",
+        "date": 30.0
+      },
+      "category" : "Book",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 4,
+      "content": {
+        "title": "당신의 뇌는 최적화를 원한다",
+        "author": "가바사와 시온",
+        "date": 0.50
+      },
+      "category" : "Book",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 5,
+      "content": {
+        "title": "데미안",
+        "author": "헤르만 헤세",
+        "date": 0.50
+      },
+      "category" : "Book",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 6,
+      "content": {
+        "title": "무엇이 우주를 삼키고 있는가",
+        "author": "폴 데이비스",
+        "date": 30.0
+      },
+      "category" : "Book",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 7,
+      "content": {
+        "title": "고양이 사용 설명서",
+        "author": "미스캣",
+        "date": 0.50
+      },
+      "category" : "Book",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    }
+  ],
+  "Travel" : [
+    {
+      "id": 1,
+      "content": {
+        "title": "대만",
+        "costs": 100,
+        "date": 7.0
+      },
+      "category" : "Travel",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 2,
+      "content": {
+        "title": "사이판",
+        "costs": 50,
+        "date": 3.0
+      },
+      "category" : "Travel",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 3,
+      "content": {
+        "title": "프랑스",
+        "costs": 700,
+        "date": 30.0
+      },
+      "category" : "Travel",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 4,
+      "content": {
+        "title": "시애틀",
+        "costs": 300,
+        "date": 10.0
+      },
+      "category" : "Travel",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    }
+  ],
+  "Health" : [
+    {
+      "id": 1,
+      "content": {
+        "title": "수영",
+        "date": 0
+      },
+      "category" : "Health",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 2,
+      "content": {
+        "title": "조깅",
+        "date": 0
+      },
+      "category" : "Health",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 3,
+      "content": {
+        "title": "테니스",
+        "date": 0
+      },
+      "category" : "Health",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    },
+    {
+      "id": 4,
+      "content": {
+        "title": "매일 1시간 걷기",
+        "date": 0
+      },
+      "category" : "Health",
+      "createdAt": "2022-12-29",
+      "updatedAt": "2022-12-29",
+      "isChecked": false
+    }
+  ]
+}
