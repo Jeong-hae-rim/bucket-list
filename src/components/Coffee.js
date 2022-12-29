@@ -164,7 +164,7 @@ const CupPlatte = styled.div`
 
 export const Coffee = ({scrollRef,fadeIn}) => {
     return(
-        <section ref={scrollRef}>
+        <section className='coffee-wrapper' ref={scrollRef}>
             <CoffeeContainer fadeIn={fadeIn}>
                     <CoffeeCup>
                         <CoffeeTop>
