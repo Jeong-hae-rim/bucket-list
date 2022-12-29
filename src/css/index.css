@@ -12,14 +12,15 @@ body {
 }
 
 header {
-  margin: 1rem;
   width: -webkit-fill-available;
   height: 2rem;
   display: flex;
   align-items: center;
   position: fixed;
   top: 0;
+  padding: 1rem;
   font-size: 2rem;
+  background-color: #000;
 }
 
 .coffee-wrapper {
@@ -51,6 +52,13 @@ header {
   height: 100vh;
 }
 
+@media screen and (max-width: 900px) {
+  .buckets-wrapper {
+    width: 100%;
+    height: 1800px;
+  }
+}
+
 .buckets-wrapper > div {
   width: 100%;
   height: 100%;
@@ -60,7 +68,6 @@ header {
 }
 
 footer {
-  margin: 1rem;
   width: -webkit-fill-available;
   height: 2rem;
   display: flex;
@@ -68,4 +75,6 @@ footer {
   justify-content: center;
   position: fixed;
   bottom: 0;
+  padding: 1rem;
+  background-color: #000;
 }

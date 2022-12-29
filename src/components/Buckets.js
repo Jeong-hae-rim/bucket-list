@@ -32,13 +32,20 @@ const BucketButton = styled.button`
 const BucketList = styled.div`
     position: absolute;
     top: 25rem;
-    width: 100%;
+    width: 90%;
     height: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        height: 500px;
+        align-items: center;
+        z-index: -1;
+    }
 `;
 
-const Buckets = () => {
+const Buckets = ({flipIn}) => {
 
     const data = useFetch("mockData.json");
 
@@ -51,10 +58,10 @@ const Buckets = () => {
                 <BucketButton>
                     Create New Bucket List
                 </BucketButton>
-                <BucketList>
+                <BucketList >
                     {data && data.map((el,idx) => {
                         return(
-                            <Bucket key={idx} el={el}/>
+                            <Bucket key={idx} idx={idx} el={el} flipIn={flipIn}/>
                         )
                     })}
                 </BucketList>
